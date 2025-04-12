@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoTech Solutions</title>
+  <style>
+    :root {
+      --green: #2ecc71;
+      --blue: #3498db;
+      --bg: #f4fdf6;
+      --text: #2c3e50;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: linear-gradient(to right, var(--green), var(--blue));
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: var(--green);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: #ecf9f0;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      background-color: var(--green);
+      color: white;
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .btn:hover {
+      background-color: #27ae60;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EcoTech Solutions</h1>
+    <p>Promoting Sustainability, Renewable Energy, and Waste Reduction</p>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h3>🌱 Renewable Energy</h3>
+      <p>We develop solar, wind, and hydro-based technologies that reduce dependency on fossil fuels and support clean energy.</p>
+      <button class="btn" onclick="learnMore('energy')">Learn More</button>
+    </div>
+
+    <div class="card">
+      <h3>♻️ Waste Reduction</h3>
+      <p>Our smart waste management solutions help communities and businesses minimize landfill waste and recycle efficiently.</p>
+      <button class="btn" onclick="learnMore('waste')">Learn More</button>
+    </div>
+
+    <div class="card">
+      <h3>🌍 Environmental Conservation</h3>
+      <p>We engage in reforestation, biodiversity protection, and community education to protect our natural ecosystems.</p>
+      <button class="btn" onclick="learnMore('conservation')">Learn More</button>
+    </div>
+
+    <div class="card">
+      <h3>🔋 Eco-Technology</h3>
+      <p>Innovative tools like smart grids, green packaging, and low-emission devices are at the core of our development strategy.</p>
+      <button class="btn" onclick="learnMore('ecoTech')">Learn More</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 EcoTech Solutions. All rights reserved.
+  </footer>
+
+  <script>
+    function learnMore(topic) {
+      alert("More information about: " + topic.replace(/([A-Z])/g, ' $1'));
+    }
+  </script>
+
+</body>
+</html>
